@@ -98,7 +98,9 @@ public class OssClient {
             this.transferManager = S3TransferManager.builder().s3Client(this.client).build();
 
             // 创建 S3 配置对象
-            S3Configuration config = S3Configuration.builder().chunkedEncodingEnabled(false)
+            // 注：aws sdk 2.28.x 异步客户端在 chunkedEncodingEnabled=false 时不会携带
+            // x-amz-content-sha256 请求头，会被 MinIO 拒绝，因此使用默认分块签名
+            S3Configuration config = S3Configuration.builder()
                 .pathStyleAccessEnabled(isStyle).build();
 
             // 创建 预签名 URL 的生成器 实例，用于生成 S3 预签名 URL

@@ -1,0 +1,3546 @@
+{
+  "fileLibrary-attive-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55,
+        "isSlot": true,
+        "slotName": "indexColumn"
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentType",
+        "label": "文件类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120,
+        "isSlot": true,
+        "slotName": "documentType"
+      },
+      {
+        "prop": "dlDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "notActiveFileLib-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentType",
+        "label": "文件类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120,
+        "isSlot": true,
+        "slotName": "documentType"
+      },
+      {
+        "prop": "dlDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "invalidFileLib-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentType",
+        "label": "文件类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120,
+        "isSlot": true,
+        "slotName": "documentType"
+      },
+      {
+        "prop": "dlDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "deactiveReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "fileLibrary-attive-other-version-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 100
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 170
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 100
+      }
+    ]
+  },
+  "fileLibrary-attive-history-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 90
+      },
+      {
+        "prop": "browseTime",
+        "label": "浏览时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 170
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 100
+      }
+    ]
+  },
+  "fileLibrary-attive-correlation-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "dlVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 100
+      }
+    ]
+  },
+  "recordLibrary-active-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "dlrCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "dlrName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "dlrVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 90
+      },
+      {
+        "prop": "dlDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "dlrActiveTime",
+        "label": "生效时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 7,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "templateLibrary-Table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "tmplCode",
+        "label": "模板编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "tmplName",
+        "label": "模板名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "tmplVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "tmplCategory",
+        "label": "模板类型",
+        "fieldType": "dict",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120,
+        "isDict": true,
+        "dict": "dms_template_type"
+      },
+      {
+        "prop": "tmplDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 7,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docCreate-Table-Edit": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docCreate-Table-Approve": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docCreate-Table-Track": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "documentDeptName",
+        "label": "所属部门",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 120
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "printApply-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "docCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 150
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "minWidth": 220
+      },
+      {
+        "prop": "printType",
+        "label": "打印类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "copies",
+        "label": "打印份数",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 90
+      },
+      {
+        "prop": "pages",
+        "label": "页数",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 7,
+        "width": 80
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "printApply-tracking-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "docCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 150
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "minWidth": 220
+      },
+      {
+        "prop": "printType",
+        "label": "打印类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "copies",
+        "label": "打印份数",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 90
+      },
+      {
+        "prop": "pages",
+        "label": "页数",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 7,
+        "width": 80
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "printApply-Document-Tracking-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "docCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 150
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "minWidth": 220
+      },
+      {
+        "prop": "stateName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "lendApply-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "借阅单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentName",
+        "label": "借阅名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "lendingPeriod",
+        "label": "借阅期限(天)",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "returnDate",
+        "label": "归还日期",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 6,
+        "width": 120
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "operateOrder-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "操作单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "operateTypeName",
+        "label": "操作类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 100
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "operateOrder-recordEdit-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentRecordCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "batchRevision-apply-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "修订单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "修订名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "applyUser",
+        "label": "申请人",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 100
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "batchRevision-approve-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "修订单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "修订名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "applyUser",
+        "label": "申请人",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 100
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "batchRevision-track-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "修订单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "修订名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "applyUser",
+        "label": "申请人",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 100
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bulkPrint-apply-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "applyReason",
+        "label": "申请名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bulkPrint-approve-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "applyReason",
+        "label": "申请名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bulkPrint-track-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "applyReason",
+        "label": "申请名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docInvalidation-apply-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docInvalidation-approve-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "docInvalidation-track-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "orderReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordInvalidation-apply-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentRecordReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordInvalidation-approve-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentRecordReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordInvalidation-track-index-list": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "失效单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentRecordReason",
+        "label": "失效原因",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 200
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordAlteration-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "orderNumber",
+        "label": "变更单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "documentRecordCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 150
+      },
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "minWidth": 220
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordAlterationEdit-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentRecordCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordAlterationEdit-approve-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentRecordCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "recordAlterationEdit-track-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentRecordCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "documentCode",
+        "label": "所属文件",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 150
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "trainingEffective-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "trainingConfirmation-doc-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "documentVersion",
+        "label": "版本",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 90
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "trainingUserConfig-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "userCategory",
+        "label": "目标类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 110
+      },
+      {
+        "prop": "nickName",
+        "label": "目标名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "training-record-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 150
+      },
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "trainUserName",
+        "label": "培训人",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "trainStatusName",
+        "label": "培训状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrint-apply-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrint-page-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrint-scann-issue-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrint-issue-receiveApplication-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrintDestruction-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrintoutTrack-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrintoutTrack-track-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrint-apply-track-book-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "volumesName",
+        "label": "成册名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 240
+      },
+      {
+        "prop": "stateName",
+        "label": "打印件状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "bookPrintConsist-task-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "rowId",
+        "label": "行号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 110
+      },
+      {
+        "prop": "docCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "width": 150
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "minWidth": 220
+      },
+      {
+        "prop": "docType",
+        "label": "文件类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 5,
+        "width": 110
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "numberApplication-table": {
+    "pageConfigAlign": "center",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "index",
+        "label": "序号",
+        "fieldType": "index",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1,
+        "width": 55
+      },
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2,
+        "width": 160
+      },
+      {
+        "prop": "deviceName",
+        "label": "设备名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 3,
+        "minWidth": 220
+      },
+      {
+        "prop": "deviceType",
+        "label": "设备类型",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 4,
+        "width": 120
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 8,
+        "width": 170
+      },
+      {
+        "prop": "statusName",
+        "label": "状态",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 9,
+        "width": 100
+      },
+      {
+        "prop": "operation",
+        "label": "操作",
+        "fieldType": "operation",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 99,
+        "slotName": "operation",
+        "width": 180
+      }
+    ]
+  },
+  "file-lib-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "file-lib-search-active": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "dlCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "fileLibrary-attive-history-search-from": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "dlName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "recordLibrary-active-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "dlrName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "dlrCode",
+        "label": "记录编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "templateEdit-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "tmplName",
+        "label": "模板名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "tmplCode",
+        "label": "模板编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "docCreate-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "printApply-form-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "printApply-Document-Tracking-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "docName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "lendApply-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "documentCode",
+        "label": "文件编号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "operateOrder-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "documentName",
+        "label": "文件名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      },
+      {
+        "prop": "orderNumber",
+        "label": "操作单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 2
+      }
+    ]
+  },
+  "batchRevision-apply-index-search-from": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "batchRevision-approve-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "batchRevision-track-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "docInvalidation-apply-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "docInvalidation-approve-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "docInvalidation-track-index-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "recordInvalidation-apply-index-search-from": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "bulkPrint-apply-index-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "bulkPrint-approve-index-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "bulkPrint-track-index-search-form": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "applyCode",
+        "label": "申请单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "recordAlteration-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "orderNumber",
+        "label": "变更单号",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  },
+  "recordAlterationEdit-search": {
+    "pageConfigAlign": "right",
+    "pageConfigSize": "small",
+    "attributeList": [
+      {
+        "prop": "documentRecordName",
+        "label": "记录名称",
+        "fieldType": "input",
+        "isEnable": "1",
+        "pageConfigAttributeSort": 1
+      }
+    ]
+  }
+}
