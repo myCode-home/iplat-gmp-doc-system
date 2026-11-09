@@ -1,0 +1,23 @@
+# dependencies / build outputs
+node_modules/
+dist/
+dist.zip
+target/
+logs/
+local/
+.local/
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# env overrides
+.env.local
+*.local
+
+# java
+*.class
+*.jar

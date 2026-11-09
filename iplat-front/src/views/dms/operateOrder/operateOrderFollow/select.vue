@@ -1,0 +1,589 @@
+<template>
+  <div class="p-2">
+    <transition :enter-active-class="proxy?.animate.searchAnimate.enter" :leave-active-class="proxy?.animate.searchAnimate.leave">
+      <div v-show="showSearch" class="mb-[10px]">
+        <el-card shadow="hover">
+          <super-search code="operateOrder-search" v-model="queryParams" @getList="getList" @resetQuery="resetQuery"> </super-search>
+        </el-card>
+      </div>
+    </transition>
+
+    <el-card shadow="hover">
+      <super-table
+        v-if="showTable"
+        :class="{ nomultiple: !multipleChoice }"
+        code="operateOrder-table-select"
+        rowKey="id"
+        ref="fileTableRef"
+        highlightCurrentRow
+        :dataLoading="loading"
+        :data="operateOrderList"
+        v-model:queryParams="queryParams"
+        :total="total"
+        @select="selectChange"
+        @selection-change="handleSelectionChange"
+        @getList="getList"
+      >
+        <!-- 文件类型 -->
+        <template #documentType="scope">
+          <dict-tag :options="docTypeOption" :value="scope.row.documentType" valueProp="id" labelProp="sortName" />
+        </template>
+      </super-table>
+    </el-card>
+    <el-dialog v-model="dialog.visible" :title="dialog.title" width="70%" append-to-body>
+      <super-form
+        v-if="dialog.visible"
+        :loading="dialog.loading"
+        disabled
+        ref="superFormRef"
+        code="operateOrder-review-form"
+        v-model="form"
+        :form-rules="rules"
+        :methods="formMethods"
+        @selectData="selectData"
+      >
+        <template #tmplName="scope">
+          <div class="tmpl-name">
+            {{ form.tmplLibName }}
+          </div>
+          
+        </template>
+        <div>
+          <el-card shadow="hover" class="my-card">
+            <template #header>
+              <div class="card-header">
+                <span>替代文件</span>
+                <!-- <el-button @click="addRelation('replace')" type="primary" size="small" style="float: right;" icon="Plus"></el-button> -->
+              </div>
+            </template>
+            <!-- docCreate-replace-list -->
+            <super-table
+              code="docCreate-replace-table"
+              rowKey="id"
+              :data="relationList"
+              highlight-current-row
+            >
+              <template #operation="scope">
+                <!-- <el-tooltip content="删除" placement="top" :enterable="false">
+                  <el-button link type="danger" icon="Delete" @click="delRelation(scope.$index,'replace')"></el-button>
+                </el-tooltip> -->
+                <el-tooltip content="查看详情" placement="top" :enterable="false">
+                  <el-button link type="primary" icon="View" @click="handleDetail(scope.row,'replace')"></el-button>
+                </el-tooltip>
+              </template>
+            </super-table>
+          </el-card>
+        </div>
+      </super-form>
+
+      <!-- 根据documentType动态显示的属性表单 -->
+      <el-form
+        v-if="dynamicAttributes.length > 0"
+        :model="dynamicForm"
+        :rules="dynamicFormRules"
+        ref="dynamicFormRef"
+        label-width="auto"
+        style="margin-top: 20px"
+      >
+        扩展属性
+        <el-row :gutter="20">
+          <el-col v-for="attribute in dynamicAttributes" :key="attribute.attributeCode" :span="12">
+            <el-form-item :label="attribute.attributeName" :prop="attribute.attributeCode">
+              <el-input
+                v-if="attribute.valueType === 'input'"
+                :disabled="true"
+                v-model="dynamicForm[attribute.attributeCode]"
+                :placeholder="'请输入' + attribute.attributeName"
+              />
+              <el-input
+                v-else-if="attribute.valueType === 'textarea'"
+                :disabled="true"
+                v-model="dynamicForm[attribute.attributeCode]"
+                type="textarea"
+                :placeholder="'请输入' + attribute.attributeName"
+                :autosize="{ minRows: 2, maxRows: 4 }"
+              />
+              <el-date-picker
+                v-else-if="attribute.valueType === 'date'"
+                :disabled="true"
+                v-model="dynamicForm[attribute.attributeCode]"
+                type="date"
+                value-format="YYYY-MM-DD"
+                :placeholder="'请选择' + attribute.attributeName"
+                style="width: 100%"
+              />
+            </el-form-item>
+          </el-col>
+        </el-row>
+      </el-form>
+
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button @click="cancel">关 闭</el-button>
+        </div>
+      </template>
+    </el-dialog>
+    <el-dialog v-model="apprDialog.visible" :title="apprDialog.title" width="500px" append-to-body>
+      <el-form>
+        <el-form-item label="提交意见" prop="approveComments">
+          <el-input v-model="apprRow.approveComments" type="textarea" placeholder="请输入提交意见"></el-input>
+        </el-form-item>
+      </el-form>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button @click="apprCancel">取 消</el-button>
+        </div>
+      </template>
+    </el-dialog>
+    <!-- 附件上传弹窗 -->
+    <el-dialog v-model="uplaodDialog.visible" :title="uplaodDialog.title" width="90%" append-to-body>
+      <biz-file-upload-list
+        v-if="uplaodDialog.visible"
+        :biz="{
+          bizId: uplaodDialog.id,
+          bizType: 'DOC_APPLICATION_FILE',
+        }"
+      ></biz-file-upload-list>
+      <template #footer>
+        <div class="dialog-footer">
+          <!-- <el-button :loading="buttonLoading" :disabled="Boolean(!selectRows.id)" type="primary" @click="submitCompare">确 定</el-button> -->
+          <el-button @click="uplaodDialog.visible = false">关 闭</el-button>
+        </div>
+      </template>
+    </el-dialog>
+    <!-- 审批记录 -->
+    <approvalRecord ref="approvalRecordRef" />
+    
+    <!-- 查看生效文件详情对话框 -->
+    <el-dialog v-model="activeDialog.visible" :title="activeDialog.title" width="90%" append-to-body>
+      <super-form
+        ref="superFormRef"
+        code="file-lib-form"
+        disabled
+        v-model="activeForm">
+        <div>
+          <PdfView v-if="activeDialog.visible&&activeForm.id" :id="activeForm.id"></PdfView>
+        </div>
+      </super-form>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button @click="activeDialog.visible = false">取 消</el-button>
+        </div>
+      </template>
+    </el-dialog>
+  </div>
+</template>
+
+<script setup name="TemplateEdit" lang="ts">
+import {
+  listDocCreateOperate,
+  addOperateOrder,
+  editOperateOrder,
+  deleteOperateOrder,
+  operateOrderDetail
+} from '@/api/dms/operateOrder/addOperateOrder/index';
+import { getAttributeList, documentList } from '@/api/dms/fileSystemOption/fileType/index';
+import { cancelProcessApply } from '@/api/workflow/instance';
+import { getFileDetail } from '@/api/dms/fileLib/index';
+import PdfView from "@/components/PdfView/index.vue";
+
+const { proxy } = getCurrentInstance() as ComponentInternalInstance;
+const props = defineProps({
+  multipleChoice: {
+    type: Boolean,
+    default: true
+  },
+  otherCondition: {
+    type: Object,
+    default: () => { }
+  },
+  multipleChoiceData: {
+    type: Function,
+    default: () => () => { }
+  }
+});
+const { dms_transact_type } = toRefs<any>(proxy?.useDict('dms_transact_type'));
+const { dms_track_state } = toRefs<any>(proxy?.useDict('dms_track_state'));
+const { dms_edit_mode } = toRefs<any>(proxy?.useDict('dms_edit_mode'));
+
+const buttonLoading = ref(false);
+const loading = ref(false);
+const showSearch = ref(true);
+const ids = ref<Array<string | number>>([]);
+const names = ref<Array<string | number>>([]);
+const single = ref(true);
+const multiple = ref(true);
+const showTable = ref(true);
+const total = ref(0);
+const approvalRecordRef = ref(null);
+const superFormRef = ref(null);
+const dynamicFormRef = ref(null);
+
+const dialog = reactive<DialogOption>({
+  title: '',
+  visible: false,
+  loading: false
+});
+
+const apprDialog = reactive<DialogOption>({
+  title: '请输入提交意见',
+  visible: false,
+  loading: false
+});
+
+// 动态属性相关数据
+const dynamicAttributes = ref([]);
+const dynamicForm = ref({});
+const dynamicFormRules = ref({});
+
+// 用于临时存储从后端获取的动态表单数据，防止被watch重置
+const tempDynamicFormData = ref({});
+
+const initFormData = {};
+const data = reactive<PageData<any, any>>({
+  form: { ...initFormData },
+  queryParams: reactive({
+    pageNum: 1,
+    pageSize: 10
+  }),
+  rules: {
+    // id: [{ required: true, message: '主键不能为空', trigger: 'blur' }],
+  }
+});
+
+const { queryParams, form, rules } = toRefs(data);
+
+watch(() => props.otherCondition, () => {
+  Object.keys(props.otherCondition).forEach(key => {
+    queryParams.value[key] = props.otherCondition[key];
+  });
+}, { immediate: true, deep: true });
+
+const operateOrderList = ref([]);
+
+// 替代文件
+const relationList = ref([]);
+
+/** 查询列表 */
+const getList = async () => {
+  loading.value = true;
+  try {
+    const res = await listDocCreateOperate(queryParams.value);
+    operateOrderList.value = res.rows;
+    total.value = res.total;
+  } finally {
+    loading.value = false;
+  }
+};
+
+// 监听documentType字段变化
+watch(
+  () => form.value.documentType,
+  async (newVal) => {
+    console.log('watchwatchwatchwatch');
+    if (newVal) {
+      try {
+        const res = await getAttributeList({ sortId: newVal });
+        dynamicAttributes.value = res.rows.filter(item=>{
+          return item.status == 'active'
+        }) || [];
+
+        // 初始化动态表单字段和校验规则
+        // 检查是否有临时存储的数据，如果有则使用临时数据，否则重置
+        if (Object.keys(tempDynamicFormData.value).length > 0) {
+          dynamicForm.value = { ...tempDynamicFormData.value };
+          // 清空临时数据
+          tempDynamicFormData.value = {};
+        } else {
+          dynamicForm.value = {};
+        }
+        dynamicFormRules.value = {};
+
+        dynamicAttributes.value.forEach((attr) => {
+          // 如果字段不存在于临时数据中，则初始化为空字符串
+          if (!(attr.attributeCode in dynamicForm.value)) {
+            dynamicForm.value[attr.attributeCode] = '';
+          }
+
+          // 如果字段是必填的，添加校验规则
+          if (attr.ifRequired) {
+            dynamicFormRules.value[attr.attributeCode] = [{ required: true, message: `${attr.attributeName}不能为空`, trigger: 'blur' }];
+          }
+        });
+      } catch (error) {
+        console.error('获取属性列表失败:', error);
+        dynamicAttributes.value = [];
+        dynamicForm.value = {};
+      }
+    } else {
+      // 当documentType为空时清空动态属性
+      dynamicAttributes.value = [];
+      dynamicForm.value = {};
+    }
+  }
+);
+
+// 提交撤销申请操作
+const submitApprove = async (id) => {
+  const data = {
+    businessId: id,
+    message: '申请人撤销流程！'
+  };
+  try {
+    loading.value = true;
+    await cancelProcessApply(data).finally(() => (loading.value = false));
+    getList();
+    proxy?.$modal.msgSuccess('撤销成功');
+  } finally{    
+    loading.value = false;
+  }
+};
+
+//审批记录
+const handleApprovalRecord = (row: any) => {
+  approvalRecordRef.value.init(row.id);
+};
+
+// 在父组件中预定义所有可能用到的方法
+const formMethods = {
+  // args参数集合 childFrom参数集合
+  customChangeHandler: (args: Array<any>, childFrom: Object) => {
+    superFormRef.value.updateData({ companyName: 'admin' });
+    console.log('自定义change事件触发');
+  },
+  handleRoleChange: (args: Array<any>, childFrom: Object) => {
+    console.log('自定义事件触发', args, childFrom);
+  },
+  handleSexChange: (args: Array<any>, childFrom: Object) => {
+    // if(args[0] == '2'){
+    //   const index = formConfig.findIndex(item=>item.prop == 'zdy')
+    //   formConfig[index].visible = true
+    // }
+    console.log('自定义事件触发', args);
+  },
+  processCompanyData: (args: Array<any>, childFrom: Object) => {
+    console.log('自定义数据处理', args, childFrom);
+  }
+};
+
+const apprRow = ref();
+// 提交审批按钮操作
+const openApprove = (row: any) => {
+  apprDialog.visible = true;
+  apprRow.value = JSON.parse(JSON.stringify(row));
+  apprRow.value.approveComments = '';
+  // console.log(row)
+};
+
+const selectData = (data: any, config) => {
+  if (config.prop == 'draftNickName') {
+    form.value.drafterId = data.id;
+    form.value.draftNickName = data.userName;
+  } else if (config.prop == 'tmplLibName') {
+    form.value.tmplLibId = data.id;
+    form.value.tmplLibName = data.tmplName;
+  }
+};
+
+/** 取消按钮 */
+const apprCancel = () => {
+  apprDialog.visible = false;
+  apprRow.value.approveComments = '';
+};
+
+/** 取消按钮 */
+const cancel = () => {
+  reset();
+  dialog.visible = false;
+};
+
+// 表单重置
+const reset = () => {
+  form.value = { ...initFormData };
+  // 重置动态表单
+  dynamicForm.value = {};
+  dynamicAttributes.value = [];
+  dynamicFormRules.value = {};
+};
+
+/** 搜索按钮操作 */
+const handleQuery = () => {
+  queryParams.value.pageNum = 1;
+  getList();
+};
+
+/** 重置按钮操作 */
+const resetQuery = () => {
+  handleQuery();
+};
+
+const selectRows = ref([]);
+const fileTableRef = ref();
+/** 多选框选中数据 */
+const handleSelectionChange = (selection: any[]) => {
+  ids.value = selection.map((item) => item.id);
+  names.value = selection.map((item) => item.tmplName);
+  single.value = selection.length != 1;
+  multiple.value = !selection.length;
+  selectRows.value = selection;
+};
+const selectChange = (selection: any[]) => {
+  if (!props.multipleChoice) {
+    if (selection.length > 1) {
+      const del_row = selection.shift();
+      fileTableRef.value.toggleRowSelection(del_row, false);
+    }
+  }
+};
+
+/** 新增按钮操作 */
+const handleAdd = () => {
+  reset();
+  dialog.visible = true;
+  dialog.loading = false;
+  dialog.title = '添加';
+};
+
+/** 查看详情 */
+const activeDialog = reactive<DialogOption>({
+  title: '',
+  visible: false,
+  loading: false
+});
+const activeForm = ref<any>({});
+
+const handleDetail = async (row?: any, type?: string) => {
+  activeDialog.visible = true;
+  activeDialog.loading = true;
+  activeDialog.title = type == 'relate' ? '关联文件查看详情' : '替代文件查看详情';
+  const _id = row?.id;
+  const res = await getFileDetail(_id);
+  activeForm.value = res.data
+  activeDialog.loading = false;
+};
+
+/** 编辑按钮操作 */
+const handleUpdate = async (row?: any) => {
+  reset();
+  dialog.visible = true;
+  dialog.loading = true;
+  dialog.title = '查看';
+  const res = (await operateOrderDetail(row?.id || ids.value[0])) as any;
+  // 如果distributeDeptId是字符串，将其转换为数组用于回显
+  // if (res.data.distributeDeptId && typeof res.data.distributeDeptId === 'string') {
+  //   res.data.distributeDeptId = res.data.distributeDeptId.split(',');
+  // }
+  // 如果返回的数据中包含ext字段，则将ext中的数据先临时存储
+  if (res.data.ext) {
+    console.log('res.data.extres.data.extres.data.ext');
+    console.log(JSON.parse(res.data.ext));
+    // 先临时存储数据，等待watch处理时使用
+    tempDynamicFormData.value = JSON.parse(res.data.ext);
+  }
+  if(res.data.libs){
+    relationList.value = res.data.libs;
+  }
+  Object.assign(form.value, res.data);
+  proxy.$nextTick(() => {
+    superFormRef.value.formatForm();
+  })
+  console.log(form.value);
+
+  dialog.loading = false;
+};
+
+/** 提交按钮 */
+const submitForm = () => {
+  const data = superFormRef.value.achieveData();
+  // 如果distributeDeptId是数组，将其转换为逗号分隔的字符串
+  if (data.distributeDeptId && Array.isArray(data.distributeDeptId)) {
+    data.distributeDeptId = data.distributeDeptId.join(',');
+  }
+  superFormRef.value?.validate(async (valid: boolean) => {
+    if (valid) {
+      // 验证动态表单
+      if (dynamicFormRef.value) {
+        try {
+          await dynamicFormRef.value.validate();
+          // 动态表单验证通过，继续提交
+        } catch {
+          // 动态表单验证失败，不继续提交
+          return;
+        }
+      }
+
+      // 合并动态表单数据到主表单数据
+      const mergedData = { ...data, ext: JSON.stringify(dynamicForm.value) };
+
+      buttonLoading.value = true;
+      if (data.id) {
+        await editOperateOrder(mergedData).finally(() => (buttonLoading.value = false));
+      } else {
+        await addOperateOrder(mergedData).finally(() => (buttonLoading.value = false));
+      }
+      proxy?.$modal.msgSuccess('操作成功');
+      dialog.visible = false;
+      await getList();
+    }
+  });
+};
+
+/** 删除按钮操作 */
+const handleDelete = async (row?: any) => {
+  await proxy?.$modal.confirm('是否确认删除操作申请"' + row?.orderNumber + '"的数据项？').finally(() => (loading.value = false));
+  await deleteOperateOrder(row?.id || ids.value);
+  proxy?.$modal.msgSuccess('删除成功');
+  await getList();
+};
+
+const uplaodDialog = reactive({
+  title: '上传附件',
+  visible: false,
+  loading: false,
+  id: '',
+});
+// 附件上传按钮操作
+const handleUpload = (row: any)=>{
+  uplaodDialog.id = row.id;
+  uplaodDialog.visible = true;
+}
+
+const docTypeOption = ref([]);
+const getDocumentList = () => {
+  documentList({
+    pageNum: 1,
+    pageSize: 9999
+  }).then((res) => {
+    docTypeOption.value = res.rows;
+  });
+};
+
+/** 提交按钮操作 */
+const confirmChoiceData = async () => {
+  if (selectRows.value.length === 0) {
+    return proxy?.$modal.msgError('请选择');
+  }
+  if (props.multipleChoice) {
+    props.multipleChoiceData(selectRows.value);
+  } else {
+    props.multipleChoiceData(selectRows.value[0]);
+  }
+};
+
+onMounted(() => {
+  getList();
+  getDocumentList();
+});
+
+defineExpose({
+  confirmChoiceData
+});
+</script>
+<style scoped lang="scss">
+.tmpl-name {
+  background-color: #f5f7fa;
+  width: 100%;border-radius: 4px;
+  padding: 1px 11px;box-shadow: 0 0 0 1px #e4e7ed inset;
+  color: rgb(0, 0, 0);
+}
+</style>
